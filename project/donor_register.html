@@ -1,0 +1,271 @@
+<!--html>
+<head>
+    <title> Transparent Login Form Design </title>
+    <link rel="stylesheet" type="text/css" href="register.css"> 
+      <script>
+function validateForm() {
+
+
+  var u = document.forms["admin_registration"]["username"].value; 
+  var c = document.forms["admin_registration"]["Donor_Name"].value;
+  var d = document.forms["admin_registration"]["Age"].value;
+
+  //var h = document.forms["admin_registration"]["HeadQuarters"].value;
+ 
+    var regex=/^[a-zA-Z]+$/;
+  if(!c.match(regex))
+      {
+          alert("Enter Donor Name in alphabets only");
+          return false;
+      }
+  else if(!u.match(regex))
+  {
+    alert("Enter username in alphabets only ");
+          return false;
+      }
+  
+  else if (d<18)
+      {
+          alert("Sorry you are not elgible to donate blood ");
+          return false;
+      }
+ /* else if (!h.match(regex))
+      {
+          alert("Enter headquarters in alphabets only ");
+          return false;
+      }*/
+  else {
+           return true;
+       }
+  }
+
+
+</script>  
+
+<style>
+        
+        body{
+    margin: 0;
+    padding: 0;
+    background: url(m.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+img{
+  position: absolute;
+  top:50%;
+  opacity: 1;
+}
+.login-box{
+    width: 320px;
+    height: 750px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    float:left;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+</style>
+      </style>
+</head>
+    <body>
+    <div class="login-box">
+            
+            <form name='admin_registration' action="donor_register.php" onsubmit="return validateForm()" method="post">
+            <h1 style="font-family: Comic Sans MS;color:white;font-size: 30px;">&nbsp;Sign Up</h1>
+            <p>Donar name</p>
+            <input type="text" name="Donor_Name" placeholder="Enter Donor Name" required>
+            <br>
+
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username" required>
+            <br>
+            <br>
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <br><br>
+            <p>Age</p>
+            <input type="number" name="Age" placeholder="Enter Age"  required>
+            <br>
+            <!--p>Gender</p>    
+            <input type="radio" name="Gender" value="male">Male<br>
+			<input type="radio" name="Gender"  value="female">Female
+			
+            <br>
+			<p>Blood Group</p>    
+			<select name="Blood_Group">
+			<option value="A+">A+</option>
+			<option value="A+">B+</option>
+			<option value="A+">O+</option>
+			<option value="A+">AB+</option>
+			<option value="A+">A-</option>
+			<option value="A+">B-</option>
+			<option value="A+">O-</option>
+			<option value="A+">AB-</option>
+			</select>
+            <br-->
+            <!--p>Phone Number</p>    
+            <input type="text" name="PhoneNo" placeholder="Enter PhoneNo" pattern="[6-9]{1}[0-9]{9}" required>
+            <br>
+            <p>E-Mail</p>    
+            <input type="text" name="Email" placeholder="Enter E-Mail" required>
+            <br>
+			
+			
+            <button class="button"><a href="index.html">Cancel</a></button>
+            <input type="submit" name="submit" value="SUBMIT">  
+        
+                
+            </form>
+         
+                
+    </div>
+    
+    </body>
+</html-->
+
+
+<html>
+<head>
+    <title> RAKTHA VEDHI </title>
+    <link rel="stylesheet" type="text/css" href="register.css"> 
+      <script>
+function validateForm() {
+
+  var u = document.forms["admin_registration"]["username"].value; 
+  var c = document.forms["admin_registration"]["Donor_Name"].value;
+  var d = document.forms["admin_registration"]["Age"].value;
+
+  //var h = document.forms["admin_registration"]["HeadQuarters"].value;
+ 
+    var regex=/^[a-zA-Z]+(?:[\s.]+[a-zA-Z]+)*$/;
+  if(!c.match(regex))
+      {
+          alert("Enter Donor Name in alphabets only");
+          return false;
+      }
+  else if(!u.match(regex))
+  {
+    alert("Enter username in alphabets only ");
+          return false;
+      }
+  
+  else if (d<18)
+      {
+          alert("Sorry you are not elgible to donate blood ");
+          return false;
+      }
+ /* else if (!h.match(regex))
+      {
+          alert("Enter headquarters in alphabets only ");
+          return false;
+      }*/
+  else {
+           return true;
+       }
+  }
+
+
+</script>  
+
+<style>
+        
+        body{
+    margin: 0;
+    padding: 0;
+    background: url(m.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+img{
+  position: absolute;
+  top:50%;
+  opacity: 1;
+}
+.login-box{
+    width: 320px;
+    height: 750px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    top: 80%;
+    left: 50%;
+    position: absolute;
+    float:left;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.div1{
+  
+    background-image: linear-gradient(white,white);
+    background-repeat:no-repeat;
+    background-position:left center;
+
+}
+      </style>
+      <div  class="div1"><div>
+    <img src="elogo.jpg" style="width:100px;height:100px;position: absolute;left:60px;top:19px"><h1 style="position: absolute;left:180px;top:40px;font-size: 30px;"><B>RAKTHA VEDHI</B></h1>
+  
+    <br><br><br><br></div><br><br><br></div>
+</head>
+    <body>
+    <div class="login-box">
+            
+            <form name='admin_registration' action="donor_register.php" onsubmit="return validateForm()" method="post">
+            <h1 style="font-family: Comic Sans MS;color:white;font-size: 30px;">&nbsp;Sign Up</h1>
+            <p>Donar name</p>
+            <input type="text" name="Donor_Name" placeholder="Enter Donor Name" required>
+            <br>
+
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username" required>
+            <br>
+            <br>
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <br><br>
+            <p>Age</p>
+            <input type="number" name="Age" placeholder="Enter Age"  required>
+            <br>
+            <!--p>Gender</p>    
+            <input type="radio" name="Gender" value="male">Male<br>
+			<input type="radio" name="Gender"  value="female">Female
+			
+            <br>
+			<p>Blood Group</p>    
+			<select name="Blood_Group">
+			<option value="A+">A+</option>
+			<option value="A+">B+</option>
+			<option value="A+">O+</option>
+			<option value="A+">AB+</option>
+			<option value="A+">A-</option>
+			<option value="A+">B-</option>
+			<option value="A+">O-</option>
+			<option value="A+">AB-</option>
+			</select>
+            <br-->
+            <p>Phone Number</p>    
+            <input type="text" name="PhoneNo" placeholder="Enter PhoneNo" pattern="[6-9]{1}[0-9]{9}" required>
+            <br>
+            <p>E-Mail</p>    
+            <input type="text" name="Email" placeholder="Enter E-Mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            <br>
+			
+			
+            <button class="button"><a href="index.html">Cancel</a></button>
+            <input type="submit" name="submit" value="SUBMIT">  
+        
+                
+            </form>
+         
+                
+    </div>
+    
+    </body>
+</html>

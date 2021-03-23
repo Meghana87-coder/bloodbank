@@ -1,0 +1,123 @@
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <title> RAKTHA VEDHI </title>
+    <link rel="stylesheet" type="text/css" href="register_login_buttons.css" > 
+</head>
+<style>
+	
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+* {box-sizing: border-box;}
+
+.container {
+  
+  max-width: 200px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+.bg-image {
+  /* The image used */
+  background-image: url("m.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(2px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 50%; 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+</style>
+<body>
+	<div class="bg-image"></div>
+<div class="bg-text">
+	 <h1 style="font-size:50px">LOGIN AS A DONOR OR RECIPIENT</h1>
+    <i class="fa fa-quote-left fa-2x "></i>Just 1 donation can save up to 3 lives. The average red blood cell transfusion is 3 pints (or 3 whole-blood donations). More than 1 million people every year are diagnosed with cancer for the first time<i class="fa fa-quote-right fa-2x"></i>
+</div>
+
+<body>
+	 <div style="text-align: center">
+	 
+	 
+
+	 <div class="login-box">
+    <br>
+    <br>
+	 	<h1 style="font-family: Georgia">LOGIN PAGE</h1></div></div>
+     
+
+	 	<marquee width="100%" direction="left" height="100px" loop="" style="color:white;font-family: Palatino;font-size: 20px;">
+Click on images to register...!!! DONATE BLOOD AND SAVE LIFE....THANK YOU   </marquee>
+	<div class="container">
+		<a target="_blank" href="donor_login.html">
+  <img src="i.jpg" alt="Paris"  style="position: absolute;    width:350px;height:250px;left:120px; bottom: 45px;">   
+ <div class="overlay">DONOR LOGIN</div>
+</a></div>
+<div class="container">
+	<a target="_blank" href="blood_bank_login.html">
+  <img src="rep.jpg" alt="Paris" style="width:350px;height:250;position: absolute;bottom:45px;right:102">
+   <div class="overlay">RECIPIENT LOGIN</div>
+</a></div>
+
+    
+
+
+	 <!--button class="button"><a href="update.html">Update Profile</button>
+	 <button class="button"><a href="Cat_But.html">Search For Job</button>
+	 <button class="button"><a href="update.html">Delete Profile</button-->
+</body>
+</html>

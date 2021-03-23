@@ -1,0 +1,337 @@
+<html>
+<head>
+<title>RAKTHA VEDHI</title>
+</head>
+    <body>
+<style>
+    body{
+        background-image: url(LI.jpg);
+    }
+table,th,tr {
+border:2px solid black;
+font-size:20px;
+}
+
+th{
+padding:10px;
+width:5%;
+}
+
+td {
+text-align:center;
+}
+
+.button{
+    background-color: white;
+    border:2px solid darkred;
+    color:black;
+    padding: 10px 8px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin:2px 1px;
+    border-radius: 12px;
+    transition-duration: 0.5s;
+    cursor: pointer;
+
+
+}
+.button:hover{
+    background-color:red;
+    color:white;
+}
+.button1{
+    background-color: white;
+    border:2px solid green;
+    color:black;
+    padding: 16px 12px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin:4px 2px;
+   
+    transition-duration: 0.5s;
+    cursor: pointer;
+
+
+}
+.button1:hover{
+    background-color:green;
+    color:white;
+}
+.bg-image {
+  /* The image used */
+  background-image: url("t.png");
+  
+  /* Add the blur effect */
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  
+  /* Full height */
+  height: 70%; 
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+.div1{
+  
+    background-image: linear-gradient(white,white);
+    background-repeat:no-repeat;
+    background-position:left center;
+
+}
+input[type=number] {
+  width: 150px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+      </style>
+      <div  class="div1"><div>
+    <img src="elogo.jpg" style="width:100px;height:100px;position: absolute;left:60px;top:19px"><h1 style="position: absolute;left:180px;top:40px;font-size: 30px;"><B>RAKTHA VEDHI</B></h1>
+  
+    <br><br><br><br></div><br><br><br></div>
+    <div class="bg-image"></div>
+<div class="bg-text">
+     <h1 style="font-size:50px">SET BLOOD DONATION TIMINGS</h1>
+    <p>"If you're a blood donor, you're a hero to someone, somewhere, who received your gracious gift of life."</p>
+</div>
+<center >
+    <p style="font-size:30px">Enter maximum number of donors per slot:</p><input type="number" id="max_patients" name="max_patients" required /></center>
+<table>
+<tr><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th><th>Sunday</th></th></tr>
+
+
+<tr><td><input id="btnAdd1" type="button" class="button" value="Add Slot" /></td><td>
+    <input id="btnAdd2" type="button" value="Add Slot" class="button" /></td><td>
+        <input id="btnAdd3" type="button" value="Add Slot" class="button" /></td><td>
+            <input id="btnAdd4" type="button" value="Add Slot" class="button" /></td><td>
+                <input id="btnAdd5" type="button" value="Add Slot" class="button" /></td><td>
+                    <input id="btnAdd6" type="button" value="Add Slot"  class="button"/></td><td>
+                        <input id="btnAdd7" type="button" value="Add Slot" class="button" /></td></tr>
+<br />
+<br />
+<tr><td><div id="TextBoxContainer1">
+    <!--Textboxes will be added here -->
+</div></td>
+<td><div id="TextBoxContainer2"></div></td>
+<td><div id="TextBoxContainer3"></div></td>
+<td><div id="TextBoxContainer4"></div></td>
+<td><div id="TextBoxContainer5"></div></td>
+<td><div id="TextBoxContainer6"></div></td>
+<td><div id="TextBoxContainer7"></div></td></tr>
+<br><br><br>
+<tr><td><input id="btnGet1" type="button" value="Save"  /></td><td><input id="btnGet2" type="button" value="Save"  /></td><td><input id="btnGet3" type="button" value="Save" /></td><td><input id="btnGet4" type="button" value="Save"  /></td><td><input id="btnGet5" type="button" value="Save" /></td><td><input id="btnGet6" type="button" value="Save"  /></td><td><input id="btnGet7" type="button" value="Save"  /></td></tr>
+</table><br><br><br><br>
+<button class="button1" 
+onclick="fun()" style="margin-left:630px;">Submit</button><br><br>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript">
+
+$(function () {
+values1="",values2="",values3="",values4="",values5="",values6="",values7="";
+    $("#btnAdd1").bind("click", function () {
+        var div = $("<div />");
+        div.html(GetDynamicTextBox1(""));
+        $("#TextBoxContainer1").append(div);
+    });
+    
+    $("#btnGet1").bind("click", function () {
+        
+        $("input[name=DynamicTextBox1]").each(function () {
+            values1 += $(this).val() + ",";
+            
+        });
+        alert("Successfully Saved");
+        
+    });
+    $("body").on("click", ".remove", function () {
+        $(this).closest("div").remove();
+        
+    });
+    
+    $("#btnAdd2").bind("click", function () {
+        var div = $("<div />");
+        div.html(GetDynamicTextBox2(""));
+        $("#TextBoxContainer2").append(div);
+    });
+    
+    $("#btnGet2").bind("click", function () {
+        
+        $("input[name=DynamicTextBox2]").each(function () {
+            values2 += $(this).val() + ",";
+            
+        });
+        alert("Successfully Saved");
+        
+    });
+    $("body").on("click", ".remove", function () {
+        $(this).closest("div").remove();
+        
+    });
+    
+    $("#btnAdd3").bind("click", function () {
+        var div = $("<div />");
+        div.html(GetDynamicTextBox3(""));
+        $("#TextBoxContainer3").append(div);
+    });
+    
+    $("#btnGet3").bind("click", function () {
+        
+        $("input[name=DynamicTextBox3]").each(function () {
+            values3 += $(this).val() + ",";
+            
+        });
+        alert("Successfully Saved");
+        
+    });
+    $("body").on("click", ".remove", function () {
+        $(this).closest("div").remove();
+        
+    });
+    
+    $("#btnAdd4").bind("click", function () {
+        var div = $("<div />");
+        div.html(GetDynamicTextBox4(""));
+        $("#TextBoxContainer4").append(div);
+    });
+    
+    $("#btnGet4").bind("click", function () {
+        
+        $("input[name=DynamicTextBox4]").each(function () {
+            values4 += $(this).val() + ",";
+            
+        });
+        alert("Successfully Saved");
+        
+    });
+    $("body").on("click", ".remove", function () {
+        $(this).closest("div").remove();
+        
+    });
+    
+    $("#btnAdd5").bind("click", function () {
+        var div = $("<div />");
+        div.html(GetDynamicTextBox5(""));
+        $("#TextBoxContainer5").append(div);
+    });
+    
+    $("#btnGet5").bind("click", function () {
+        
+        $("input[name=DynamicTextBox5]").each(function () {
+            values5 += $(this).val() + ",";
+            
+        });
+        alert("Successfully Saved");
+        
+    });
+    $("body").on("click", ".remove", function () {
+        $(this).closest("div").remove();
+        
+    });
+    
+    $("#btnAdd6").bind("click", function () {
+        var div = $("<div />");
+        div.html(GetDynamicTextBox6(""));
+        $("#TextBoxContainer6").append(div);
+    });
+    
+    $("#btnGet6").bind("click", function () {
+        
+        $("input[name=DynamicTextBox6]").each(function () {
+            values6 += $(this).val() + ",";
+            
+        });
+        alert("Successfully Saved");
+        
+    });
+    $("body").on("click", ".remove", function () {
+        $(this).closest("div").remove();
+        
+    });
+    
+    $("#btnAdd7").bind("click", function () {
+        var div = $("<div />");
+        div.html(GetDynamicTextBox7(""));
+        $("#TextBoxContainer7").append(div);
+    });
+    
+    $("#btnGet7").bind("click", function () {
+        
+        $("input[name=DynamicTextBox7]").each(function () {
+            values7 += $(this).val() + ",";
+            
+        });
+        alert("Successfully Saved");
+        
+    });
+    $("body").on("click", ".remove", function () {
+        $(this).closest("div").remove();
+        
+    });
+});
+function GetDynamicTextBox1(value) {
+    return '<input name = "DynamicTextBox1" type="time" value = "" />&nbsp;'+
+            '<input type="button" value="Remove" class="remove" />'
+}
+
+function GetDynamicTextBox2(value) {
+    return '<input name = "DynamicTextBox2" type="time" value = "" />&nbsp;'+
+            '<input type="button" value="Remove" class="remove" />'
+}
+
+function GetDynamicTextBox3(value) {
+    return '<input name = "DynamicTextBox3" type="time" value = "" />&nbsp;'+
+            '<input type="button" value="Remove" class="remove" />'
+}
+
+function GetDynamicTextBox4(value) {
+    return '<input name = "DynamicTextBox4" type="time" value = "" />&nbsp;'+
+            '<input type="button" value="Remove" class="remove" />'
+}
+
+function GetDynamicTextBox5(value) {
+    return '<input name = "DynamicTextBox5" type="time" value = "" />&nbsp;'+
+            '<input type="button" value="Remove" class="remove" />'
+}
+
+function GetDynamicTextBox6(value) {
+    return '<input name = "DynamicTextBox6" type="time" value = "" />&nbsp;'+
+            '<input type="button" value="Remove" class="remove" />'
+}
+
+function GetDynamicTextBox7(value) {
+    return '<input name = "DynamicTextBox7" type="time" value = "" />&nbsp;'+
+            '<input type="button" value="Remove" class="remove" />'
+}
+
+function fun() {
+var max_patients=document.getElementById('max_patients').value;
+window.location.href="set_blood_donation_timings.php?max_patients="+max_patients+"&val1="+values1+"&val2="+values2+"&val3="+values3+"&val4="+values4+"&val5="+values5+"&val6="+values6+"&val7="+values7;
+}
+</script>
+</body>
+</html>
+
+
+
+

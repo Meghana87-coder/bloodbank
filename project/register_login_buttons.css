@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(b.png);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    
+}
+.right {
+    text-align: right;
+    float: right;
+}
+.left {
+    text-align: left;
+    float: left;
+}
+.button {
+   background-color: #1c8adb; /* Blue */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width:40px;
+    height: 20px;
+    border-radius: 20px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+.button:hover {opacity: 1}
+.login-box a{
+    text-decoration: none;
+    font-size: 50px;
+    color:black;
+  }
+.login-box a:hover
+{
+    color: darkred;
+}
+.logout a{
+    text-decoration: none;
+    font-size: 10px;
+    color: #fff;
+     text-align: right;
+    float: right;
+   
+}
+.logout a:hover
+{
+    color: #39dc79;
+}
+a.one:link {color:#ff0000;}
+a.one:visited {color:#0000ff;}
+a.one:hover {color:#ffcc00;}

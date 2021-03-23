@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title> RAKTHA VEDHI </title>
+    <link rel="stylesheet" type="text/css" href="login.css"> 
+    
+<link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css"/>
+  <link href="fiile_nme.css" rel= "stylesheet" type="text/css">
+
+
+    <script src="checking.js"></script>
+	<script>
+	$("#1").keyup(function(event){
+    if(event.keyCode == 13){
+        $("form").submit();
+    }
+});
+
+$("form").on('submit', function(e){
+    e.preventDefault();
+    //alert('abcde');
+});
+</script>
+</head>
+    <body>       
+   <style type="text/css">  
+
+.div1{
+  
+    background-image: linear-gradient(white,white);
+    background-repeat:no-repeat;
+    background-position:left center;
+
+}
+      </style>
+      <div  class="div1"><div>
+    <img src="elogo.jpg" style="width:100px;height:100px;position: absolute;left:60px;top:19px"><h1 style="position: absolute;left:180px;top:40px;font-size: 30px;"><B>RAKTHA VEDHI</B></h1>
+  
+    <br><br><br><br></div><br><br><br></div>
+<br><br>
+
+
+        
+    <div class="login-box">
+   
+        <h1 style="font-family:Times new Roman,serif;color:white;font-size: 50px;">User Login</h1>
+            <form name="login" action="donor_login_validation.php" method="post">
+			<div id="1">
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username" required>
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password" required>
+			<a href="donor_forgot_password.php">Forgot Password?</a><br>
+            <button class="button"><a href="index.php" style="font-size: 18px;">Cancel</a></button>
+            <input type="submit" name="submit" value="Login">
+            <!--a href="#.html">Forget Password</a-->    
+			</div>
+           </form>
+        
+        
+        </div>
+    
+    </body>
+</html>

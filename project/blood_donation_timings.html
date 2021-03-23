@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>RAKTHA VEDHI</title>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+<input type="text" name="daterange" value="01/01/2018 - 01/15/2018" />
+
+<script>
+$(function() {
+  $('input[name="daterange"]').daterangepicker({
+    opens: 'left',
+    timePicker: true,
+            timePicker24Hour: true,
+            timePickerIncrement: 1,
+            //timePickerSeconds: true,
+    locale: {
+                format: 'HH:mm'
+            }
+  }, function(start, end, label) {
+    console.log("A new time selection was made: " + start.format('HH:mm') + ' to ' + end.format('HH:mm'));
+  }).on('show.daterangepicker', function (ev, picker) {
+            picker.container.find(".calendar-table").hide();
+        });;
+});
+</script>
+</head>

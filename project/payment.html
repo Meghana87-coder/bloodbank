@@ -1,0 +1,213 @@
+<html lang="en">
+<head>
+<title>RAKTHA VEDHI</title>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css" />
+ 
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/base/jquery-ui.css"-->
+    
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+	<script type="text/javascript">
+	
+$(document).ready(function() {
+
+$(".debit-form").hide();
+$(".debit").css("background", "none");
+
+$(".debit").click(function(){
+  $(".credit-form").hide();
+  $(".debit-form").show();
+  $(".credit").css("background", "none");
+  $(".debit").css("background", "#fff");
+});
+
+$(".credit").click(function(){
+  $(".credit-form").show();
+  $(".debit-form").hide();
+  $(".debit").css("background", "none");
+  $(".credit").css("background", "#fff");
+});
+
+
+
+
+
+
+
+});
+</script> 
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+
+body{
+  background: #e9eaea;
+  font-family: roboto;
+  
+}
+
+.container{
+  width: 450px;
+  margin: 30px auto;
+}
+
+.credit,
+.debit{
+  width: 50%;
+  background: #fff;
+  float: left;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.credit-form,
+.debit-form{
+  background: #fff;
+  padding: 40px;
+  clear: both;
+  width: 100%;
+  box-sizing: border-box;
+  height: 600px;
+}
+
+.input{
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border: 2px solid #e9eaea;
+  color: #3e3e40;
+  font-size: 14px;
+  outline: none;
+  transform: all 0.5s ease;
+}
+
+.input:focus{
+  border: 2px solid #34b3a0;
+}
+
+.btn{
+  width: 100%;
+  background: #34b3a0;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+span a{
+  text-decoration: none;
+  color: #000;
+}
+
+ .ui-datepicker-calendar {
+display:none;
+}
+
+</style>
+</head>
+<body>
+ 
+    <div class="container">
+      
+      <div class="credit">Credit Card</div>
+      <div class="debit">Debit Card</div>
+      
+       <div class="credit-form">
+	   <form name="credit1" action="send_otp.php" method="post">
+          Card Owner<input type="text"  placeholder="Card owner name" class="input" required ><br />
+          Card Number<input type="number" placeholder="Valid Card number" class="input" min="100000000000000" max="9999999999999999" required><br />
+          Expiration Date<input id="datepicker1" name="date_picker" type="text" class="input" style="cursor:pointer" required><br />
+		  
+          CVV Code<input type="password" placeholder="Enter CVV code" class="input" min="100" max="999" required><br />		  
+          <input type="submit" class="btn" value="Make Payment"></input>
+		  </form>
+       </div>
+      
+      <div class="debit-form">
+	  <form name="credit1" action="send_otp.php" method="post">
+          Card Owner<input type="text" placeholder="Card owner name" class="input" required><br />
+          Card Number<input type="number" placeholder="Valid Card number" class="input" min="100000000000000" max="9999999999999999" required><br />
+           Expiration Date<input id="datepicker2" name="date_picker" type="text" class="input"  style="cursor:pointer" required><br />
+          CVV Code<input type="password" placeholder="Enter CVV code" class="input" min="100" max="999" required><br />		  
+          <input type="submit" class="btn" value="Make Payment"></input>
+		  </form>
+          <!--span><a href="#">I forgot my username or password.</a></span-->
+       </div>
+      
+    </div>
+  
+
+<script type="text/javascript">
+
+
+$(function() {
+
+$('#datepicker1').datepicker({
+		changeMonth:true,
+		changeYear:true,
+		 showButtonPanel: true,
+  dateFormat: 'MM yy',
+  minDate:0,
+  
+  beforeShow: function(input) {
+    $(input).datepicker("widget").addClass('hide-calendar');
+  },
+  onClose: function(dateText, inst) {
+    $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+    $(this).datepicker('widget').removeClass('hide-calendar');
+  }
+});
+
+$('#datepicker2').datepicker({
+		changeMonth:true,
+		changeYear:true,
+		 showButtonPanel: true,
+  dateFormat: 'MM yy',
+  minDate:0,
+  
+  beforeShow: function(input) {
+    $(input).datepicker("widget").addClass('hide-calendar');
+  },
+  onClose: function(dateText, inst) {
+    $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1));
+    $(this).datepicker('widget').removeClass('hide-calendar');
+  }
+});
+			});
+			
+        
+		
+
+			
+       
+</script>
+
+
+
+
+
+</body>
+</html>

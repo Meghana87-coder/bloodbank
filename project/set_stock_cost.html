@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>RAKTHA VEDHI</title>
+<style>
+table,td,th,tr{
+border:2px solid black;
+width:60%;
+height:40%;
+text-align:center;
+
+}
+.background{
+margin-top:50px;
+margin-left:400px;
+  
+}
+	   body{
+    margin: 0;
+    padding: 0;
+    background: url(m.jpg);
+    background-size: 100%;
+    background-position: center;
+    font-family: sans-serif;
+
+
+}
+#c {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  
+}
+
+#c td, #c th {
+  border: 1px solid darkred;
+  padding: 8px;
+}
+
+#c tr:nth-child(even){background-color: #FFFACD}
+#c tr:nth-child(odd){background-color: #FFF8DC}
+#c tr:hover {background-color: #FF6633;}
+
+#c th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #CC0000;
+  color: white;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.buttonS {
+  background-color: white; 
+  color: black; 
+  border: 2px solid black;
+}
+
+.buttonS:hover {
+  background-color: #f44336;
+  color: white;
+}.div1{
+  
+    background-image: linear-gradient(white,white);
+    background-repeat:no-repeat;
+    background-position:left center;
+
+}
+      </style>
+      <div  class="div1"><div>
+    <img src="elogo.jpg" style="width:100px;height:100px;position: absolute;left:60px;top:19px"><h1 style="position: absolute;left:180px;top:40px;font-size: 30px;"><B>RAKTHA VEDHI</B></h1>
+  
+    <br><br><br><br></div><br><br><br></div>
+
+
+</head>
+<body>
+
+<br>
+<br>
+<form name="set_stock_cost" method="post" action="set_stock_cost.php">
+	<h1 style="font-family: verdana;color:black;font-size: 30px;color: solid black" align="center">Set the Stock and Cost accordingly</h1>
+<div class="background">
+<table id="c">
+<tr>
+<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blood Group</th>
+<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Stock<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(in units)</th>
+<th>Cost per unit blood &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Rs.)</th>
+</tr>
+<tr>
+<td>A+</td>
+<td><input type="number" name="A+_stock" placeholder="A+ Stock" required></td>
+<td><input type="number" name="A+_cost" placeholder="A+ Cost" required></td>
+</tr>
+<tr>
+<td>B+</td>
+<td><input type="number" name="B+_stock" placeholder="B+ Stock" required></td>
+<td><input type="number" name="B+_cost" placeholder="B+ Cost" required></td>
+</tr>
+<tr>
+<td>O+</td>
+<td><input type="number" name="O+_stock" placeholder="O+ Stock"required></td>
+<td><input type="number" name="O+_cost" placeholder="O+ Cost"required></td>
+</tr>
+<tr>
+<td>AB+</td>
+<td><input type="number" name="AB+_stock" placeholder="AB+ Stock"required></td>
+<td><input type="number" name="AB+_cost" placeholder="AB+ Cost"required></td>
+</tr>
+<tr>
+<td>A-</td>
+<td><input type="number" name="A-_stock" placeholder="A- Stock"required></td>
+<td><input type="number" name="A-_cost" placeholder="A- Cost"required></td>
+</tr>
+<tr>
+<td>B-</td>
+<td><input type="number" name="B-_stock" placeholder="B- Stock"required></td>
+<td><input type="number" name="B-_cost" placeholder="B- Cost"required></td>
+</tr>
+<tr>
+<td>O-</td>
+<td><input type="number" name="O-_stock" placeholder="O- Stock"required></td>
+<td><input type="number" name="O-_cost" placeholder="O- Cost"required></td>
+</tr>
+<tr>
+<td>AB-</td>
+<td><input type="number" name="AB-_stock" placeholder="AB- Stock" required></td>
+<td><input type="number" name="AB-_cost" placeholder="AB- Cost"required></td>
+</tr>
+</table>
+<button class="button buttonS" style="margin-left:250px;">SUBMIT</button>
+</div>
+</body>
+</html>
+

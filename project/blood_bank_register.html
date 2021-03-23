@@ -1,0 +1,117 @@
+<html>
+<head>
+    <title> RAKTHA VEDHI </title>
+    <link rel="stylesheet" type="text/css" href="register.css"> 
+      <script>
+function validateForm() {
+  var u = document.forms["admin_registration"]["username"].value; 
+  var c = document.forms["admin_registration"]["Blood_Bank_Name"].value;
+  var d = document.forms["admin_registration"]["Address"].value;
+  //var h = document.forms["admin_registration"]["HeadQuarters"].value;
+ 
+    var regex=/^[a-zA-Z]+(?:[\s.]+[a-zA-Z]+)*$/;
+  if(!c.match(regex))
+      {
+          alert("Enter Blood Bank Name in alphabets only");
+          return false;
+      }
+  else if(!u.match(regex))
+  {
+    alert("Enter username in alphabets only ");
+          return false;
+      }
+  
+  else if (!d.match(regex))
+      {
+          alert("Enter address in alphabets only ");
+          return false;
+      }
+  /*else if (!h.match(regex))
+      {
+          alert("Enter headquarters in alphabets only ");
+          return false;
+      }*/
+  else {
+           return true;
+       }
+  }
+
+
+</script>  
+
+</head>
+    <body>
+      <style>
+        body{
+    margin: 0;
+    padding: 0;
+    background: url(i.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+img{
+  position: absolute;
+  top:50%;
+  opacity: 1;
+}
+.login-box{
+    width: 320px;
+    height: 700px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    top: 500px;
+    left: 50%;
+    position: absolute;
+    float:left;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+.div1{
+  
+    background-image: linear-gradient(white,white);
+    background-repeat:no-repeat;
+    background-position:left center;
+
+}
+      </style>
+      <div  class="div1"><div>
+    <img src="elogo.jpg" style="width:100px;height:100px;position: absolute;left:60px;top:19px"><h1 style="position: absolute;left:180px;top:40px;font-size: 30px;"><B>RAKTHA VEDHI</B></h1>
+  
+    <br><br><br><br></div><br><br><br></div>
+
+          <div class="login-box">
+            <h1 style="font-family: Comic Sans MS;color:white;font-size: 30px;">&nbsp;Sign Up</h1>
+            <form name='admin_registration' action="blood_bank_register.php" onsubmit="return validateForm()" method="post">
+            <p>Blood Bank Name</p>
+            <input type="text" name="Blood_Bank_Name" placeholder="Enter Blood Bank Name" required>
+            <br>
+
+            <p>Username</p>
+            <input type="text" name="username" placeholder="Enter Username" required>
+            <br>
+            <br>
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <br><br>
+            <p>Phone</p>
+            <input type="text" name="PhoneNo" placeholder="Enter phone" pattern="[6-9]{1}[0-9]{9}" required>
+            <br>
+            <p>Email</p>    
+            <input type="text" name="Email" placeholder="Enter Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required >
+            <br>
+            <p>Address</p>    
+            <input type="text" name="Address" placeholder="Enter Address" required>
+            <br>
+            <button class="button"><a href="index.php">Cancel</a></button>
+                       <input type="submit" name="submit" value="SUBMIT">  
+        
+                
+            </form>
+         
+                
+    </div>
+    
+    </body>
+</html>
